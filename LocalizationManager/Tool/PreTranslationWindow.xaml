@@ -1,0 +1,71 @@
+﻿<simpleChildWindow:ChildWindow x:Class="LocalizationManager.PreTranslationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.ToolKit"
+        xmlns:simpleChildWindow="clr-namespace:MahApps.Metro.SimpleChildWindow;assembly=MahApps.Metro.SimpleChildWindow"
+        xmlns:local="clr-namespace:LocalizationManager"        
+        mc:Ignorable="d" IsOpen="True"
+        Title="PreTranslation" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" d:DesignHeight="355" d:DesignWidth="510">
+    <simpleChildWindow:ChildWindow.OverlayBrush>
+        <SolidColorBrush Opacity="0.8" Color="{StaticResource MahApps.Colors.Gray2}" />
+    </simpleChildWindow:ChildWindow.OverlayBrush>
+    <Grid Width="500" Height="341">
+        <WrapPanel Orientation="Vertical" Margin="0,10,0,0" RenderTransformOrigin="0.408,0.55">
+            <WrapPanel Orientation="Horizontal" Margin="0, 12, 0, 0" Width="444">
+                <TextBlock Text="Provider" FontWeight="Bold" Margin="10, 0, 0, 0" Width="161"/>
+                <ComboBox x:Name="ProviderBox" Width="200" />
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="0, 12, 0, 0" Width="441">
+                <TextBlock Text="Category" FontWeight="Bold" Margin="10, 0, 0, 0" Width="160"/>
+                <ComboBox x:Name="CategoryBox" Width="200" SelectionChanged="Category_OnSelectionChanged"/>
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="0, 12, 0, 0" Width="439">
+                <TextBlock Text="Partial" FontWeight="Bold" Margin="10, 0, 0, 0" Width="160"/>
+                <ComboBox x:Name="PartialBox" Width="200" />
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="0, 25, 0, 0" Width="460">
+                <TextBlock Text="Source Language" FontWeight="Bold" Margin="10, 0, 0, 0" Width="110"/>
+                <ComboBox x:Name="SourceLangBox" Width="100"  />
+
+                <TextBlock Text="Target Language" FontWeight="Bold" Margin="30, 0, 0, 0" Width="104"/>
+                <ComboBox x:Name="TargetLangBox" Width="100"  />
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Margin="0,12,0,0" Width="465">
+                <TextBlock Text="Status" FontWeight="Bold" Margin="12,0,0,0" Width="35"/>
+                <CheckBox x:Name="EmptyBox" Content="[Empty]" Margin="20,0,0,0" IsChecked="True"/>
+                <CheckBox x:Name="NewBox" Content="New" Margin="10,0,0,0" IsChecked="True"/>
+                <CheckBox x:Name="UpdateBox" Content="Update" Margin="10,0,0,0" IsChecked="True"/>
+                <CheckBox x:Name="TranslatedBox" Content="Translated" Margin="10,0,0,0" IsChecked="False" Width="79"/>
+                <CheckBox x:Name="PreTranslatedBox" Content="Pre-Translated" Margin="10,0,0,0" IsChecked="False"/>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Margin="0,16,0,0" Width="464">
+                <TextBlock Text="Tag " HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                   Width="56" Height="24" FontWeight="Bold" Margin="12, 0, 0, 0" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.005"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <ComboBox x:Name="InclusionTagBox" Width="350" Height="8" />
+            </WrapPanel>
+            <Grid Margin="0, 40, 0, 10" Width="492">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Content="Cancel" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnCancel_Click"/>
+                    <Button x:Name="btnTranslate" Content="Translate" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnTranslate_Click"/>
+                </StackPanel>
+            </Grid>
+        </WrapPanel>
+    </Grid>
+</simpleChildWindow:ChildWindow>

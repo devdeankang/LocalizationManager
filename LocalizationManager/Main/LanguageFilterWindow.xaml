@@ -1,0 +1,36 @@
+﻿<simpleChildWindow:ChildWindow x:Class="LocalizationManager.LanguageFilterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:simpleChildWindow="clr-namespace:MahApps.Metro.SimpleChildWindow;assembly=MahApps.Metro.SimpleChildWindow"
+        xmlns:local="clr-namespace:LocalizationManager"
+        mc:Ignorable="d" IsOpen="True"
+        Title="Language Filter" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" d:DesignHeight="300" d:DesignWidth="630" AllowMove="True">
+    <simpleChildWindow:ChildWindow.OverlayBrush>
+        <SolidColorBrush Opacity="0.8" Color="{StaticResource MahApps.Colors.Gray2}" />
+    </simpleChildWindow:ChildWindow.OverlayBrush>
+    
+    <Grid>
+        <WrapPanel Orientation="Vertical">
+            <TextBlock Text="Select Language" FontWeight="Bold" Margin="0, 10, 0, 0" />
+            <CheckBox x:Name="SelectAll" Content="Select All Languages" Margin="13, 5, 5, 5" Click="ClickSelectAll"/>
+            <ScrollViewer Width="440" MaxHeight="300"
+                            HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="8, 0, 0, 0">
+                <WrapPanel Name="LanguageList" Orientation="Vertical" >
+                    <!--<CheckBox></CheckBox>-->
+                </WrapPanel>
+            </ScrollViewer>
+
+            <Grid Margin="24, 15, 23, 10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Content="Cancel" Width="70" Margin="10, 0, 0, 0" Tag="SetZipTemplate"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnCancel_Click"/>
+                    <Button x:Name="btnApply" Content="Apply" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnApply_Click"/>
+                </StackPanel>
+            </Grid>
+        </WrapPanel>
+    </Grid>
+</simpleChildWindow:ChildWindow>

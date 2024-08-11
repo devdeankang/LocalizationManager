@@ -1,0 +1,34 @@
+﻿<simpleChildWindow:ChildWindow x:Class="LocalizationManager.FixKoreanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:simpleChildWindow="clr-namespace:MahApps.Metro.SimpleChildWindow;assembly=MahApps.Metro.SimpleChildWindow"
+        xmlns:local="clr-namespace:LocalizationManager"
+        mc:Ignorable="d" IsOpen="True"
+        Title="Fix Korean" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" d:DesignHeight="300" d:DesignWidth="630">
+    <simpleChildWindow:ChildWindow.OverlayBrush>
+        <SolidColorBrush Opacity="0.8" Color="{StaticResource MahApps.Colors.Gray2}" />
+    </simpleChildWindow:ChildWindow.OverlayBrush>
+    
+    <Grid>
+        <WrapPanel Orientation="Vertical" Margin="0, 0, 10 ,0">
+            <WrapPanel Orientation="Horizontal" Margin="0, 8, 0, 0">
+                <TextBlock Text="Key" FontWeight="Bold" Margin="10, 0, 0, 0" />
+                <TextBox x:Name="FixKey" Text="" Width="440" Margin="10, 0, 0, 0"/>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Margin="0, 12, 0, 0">
+                <TextBlock Text="Korean" FontWeight="Bold" Margin="10, 0, 0, 0" />
+                <TextBox x:Name="FixKorean" Text="" Width="440" Margin="10, 0, 0, 0"/>
+            </WrapPanel>
+            <Grid Margin="0, 20, 0, 10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Content="Cancel" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnCancel_Click"/>
+                    <Button x:Name="btnApply" Content="Apply" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="btnApply_Click"/>
+                </StackPanel>
+            </Grid>
+        </WrapPanel>
+    </Grid>
+</simpleChildWindow:ChildWindow>

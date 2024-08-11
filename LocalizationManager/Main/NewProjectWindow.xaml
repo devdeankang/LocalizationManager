@@ -1,0 +1,38 @@
+﻿<simpleChildWindow:ChildWindow x:Class="LocalizationManager.NewProjectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:simpleChildWindow="clr-namespace:MahApps.Metro.SimpleChildWindow;assembly=MahApps.Metro.SimpleChildWindow"
+        xmlns:local="clr-namespace:LocalizationManager"
+        mc:Ignorable="d" IsOpen="True"
+        Title="New Project" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" d:DesignHeight="300" d:DesignWidth="300" 
+                               Loaded="ChildWindow_Loaded">
+    <simpleChildWindow:ChildWindow.OverlayBrush>
+        <SolidColorBrush Opacity="0.8" Color="{StaticResource MahApps.Colors.Gray2}" />
+    </simpleChildWindow:ChildWindow.OverlayBrush>
+
+    <Grid>
+        <WrapPanel Orientation="Vertical" Width="630" >
+            <TextBlock Text="ProjectName" Margin="10" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="ProjectName" Text="" Width="550" Height="25" TextChanged="CheckValidateProject"/>
+            <TextBlock Text="Location" Margin="10" FontWeight="Bold" FontSize="14"/>
+            <Grid Margin="24, 0, 0, 0">
+                <StackPanel Orientation="Horizontal" > 
+                    <TextBox x:Name="Location" Text="" Width="550" Height="25" TextChanged="CheckValidateProject" />
+                    <Button x:Name="btnLocationSet" Content="..." Margin="10, 0, 0, 0" Click="SetProjectLocation"/>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="24, 15, 0, 10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Content="Cancel" Width="70" Margin="10, 0, 0, 0" 
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="ClickBtnCancel"/>
+                    <Button x:Name="btnCreate" Content="Create" Width="70" Margin="10, 0, 0, 0"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="ClickBtnCreate"/>
+                </StackPanel>
+            </Grid>
+        </WrapPanel>
+        
+    </Grid>
+    
+</simpleChildWindow:ChildWindow>

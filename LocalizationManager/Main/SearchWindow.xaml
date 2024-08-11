@@ -1,0 +1,75 @@
+﻿<Controls:MetroWindow x:Class="LocalizationManager.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:LocalizationManager"
+        mc:Ignorable="d"
+        Title="Search" Height="550" Width="800" ShowCloseButton="True" Closed="SearchWindow_Closed" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="76"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="5">
+                <TextBox x:Name="searchBox" Text="" HorizontalAlignment="Stretch" TextAlignment="Left" KeyDown="searchBox_KeyDown"></TextBox>
+            </Grid>
+            <Grid Grid.Column="1" Margin="5">
+                <Button x:Name="searchBtn" Content="Search" Margin="5, 0, 0, 0" Click="searchBtn_Click"></Button>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="5">
+                <WrapPanel Orientation="Vertical">
+                    <CheckBox x:Name="searchKey" Content="Key" Margin="5" IsChecked="True"/>
+                    <CheckBox x:Name="searchValue" Content="Value" Margin="5"/>
+                </WrapPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="5">
+                <WrapPanel Orientation="Vertical">
+                    <CheckBox x:Name="matchCase" Content="Match Case" Margin="5"/>
+                    <CheckBox x:Name="matchWord" Content="Match whole word" Margin="5"/>
+                </WrapPanel>
+            </Grid>
+
+            <Grid Grid.Column="2" Margin="5">
+                <WrapPanel Orientation="Vertical">
+                    <ComboBox IsEditable="True" IsReadOnly="True" Text="Category" Width="100" DropDownClosed="CategoryCombobox_DropDownClosed"
+                              Margin="3" x:Name="CategoryCombobox" >
+                        
+                    </ComboBox>
+
+                    <ComboBox IsEditable="True" IsReadOnly="True" Text="Language" Width="100" DropDownClosed="LanguageCombobox_DropDownClosed"
+                              Margin="3" x:Name="LanguageCombobox" >
+
+                    </ComboBox>
+                </WrapPanel>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="2" x:Name="SearchDataGrid" >
+            <DataGrid x:Name="searchDataGrid" IsReadOnly="True" Margin="5,0,0,0" GridLinesVisibility="All" SelectionUnit="Cell" ColumnWidth="150"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      Loaded="DataGridLoaded">
+
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="LocalizationManager.DataGridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:LocalizationManager"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" HorizontalAlignment="Right">
+            <Button x:Name="btnLangFilter" Content="Language Set" Width="110" Height="26" Margin="0, 0, 10, 0" Visibility="Hidden" Click="btnLangFilter_Click"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Controls:MetroTabControl x:Name="DataGridTab" Controls:TabControlHelper.Underlined="TabItems">
+                <Controls:MetroTabItem Name="DaaGridTabItem" Header="" 
+                                        CloseButtonEnabled="False" IsEnabled="False">
+                    <DataGrid Name="DataGrid" IsReadOnly="True" Margin="5,0,0,0" GridLinesVisibility="All" SelectionUnit="FullRow" ColumnWidth="165"
+                          Loaded="DataGridLoaded">
+
+                    </DataGrid>
+                </Controls:MetroTabItem>
+            </Controls:MetroTabControl>
+        </Grid>
+    </Grid>
+</UserControl>

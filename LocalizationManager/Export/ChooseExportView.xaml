@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="LocalizationManager.ChooseExportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:LocalizationManager"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Controls:MetroTabControl x:Name="ExportTab" Controls:TabControlHelper.Underlined="SelectedTabItem"
+                                      SelectionChanged="ExportTab_SelectionChanged">
+                <Controls:MetroTabItem Name="ExportAll" Header="All">
+
+                </Controls:MetroTabItem>
+                <Controls:MetroTabItem Name="ExportTBT" Header="TBT">
+                    <WrapPanel Orientation="Vertical" Width="630" HorizontalAlignment="Left">
+                        <CheckBox x:Name="checkBoxSyncKeysOnly" Content="Newly updated TBT only" FontSize="15" FontWeight="Bold" IsChecked="True" Margin="8" Height="25"/>
+                    </WrapPanel>
+                </Controls:MetroTabItem>
+                <Controls:MetroTabItem Name="ExportTag" Header="Tag">
+                    <WrapPanel Orientation="Vertical" Width="630" HorizontalAlignment="Left">
+                        <TextBlock Text="Tag" Margin="10" FontWeight="Bold" FontSize="14"/>
+                        <TextBox x:Name="TagName" Text="" Margin="24, 0, 0, 0" Width="550" Height="25" />
+
+                    </WrapPanel>
+                </Controls:MetroTabItem>
+            </Controls:MetroTabControl>
+            <TextBlock Text="Location" Margin="10" FontWeight="Bold" FontSize="14"/>
+            <Grid Margin="24, 0, 0, 0">
+                <StackPanel Orientation="Horizontal" Width="630">
+                    <ComboBox x:Name="Location_Combobox" Width="550" Height="25" IsEditable="True" TextBoxBase.TextChanged="CheckValidateExport"
+                              Controls:TextBoxHelper.ClearTextButton="True" />
+                    <Button x:Name="btnLocationSet1" Content="..." Margin="10, 0, 0, 0" Click="SetExportLocation"/>
+                </StackPanel>
+            </Grid>
+            <TextBlock Text="Name" Margin="10" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="TextBoxFileName" Text="" Margin="24, 0, 0, 0" Width="550" Height="25" HorizontalAlignment="Left"/>
+            <WrapPanel Orientation="Horizontal" Margin="10, 15, 0, 0">
+                <ComboBox Name="ExportFileType" Width="150" HorizontalAlignment="Left" >
+                    <ComboBoxItem Content="CSV" IsSelected="True"/>
+                    <ComboBoxItem Content="XLSX" />
+                </ComboBox>
+                <ComboBox Name="CollectType" Width="150" HorizontalAlignment="Left" Margin="15, 0, 0, 0">
+                    <ComboBoxItem Content="All Language" IsSelected="True"/>
+                    <ComboBoxItem Content="By Language" />
+                    <ComboBoxItem Content="By Custom Template" />
+                </ComboBox>
+                <Controls:ToggleSwitch x:Name="CompressZip" Content="Compress ZIP" Margin="15, 5, 0, 0" IsOn="False" />
+            </WrapPanel>
+            <Controls:ToggleSwitch x:Name="PartialSwitch" Content="Export Category, Partial" Margin="15, 15, 0, 0" IsOn="False" />
+            
+            <Grid Margin="24, 15, 23, 10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnCancel" Content="Cancel" Width="70" Margin="10, 0, 0, 0" Tag="ChooseExport"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="ClickBtnCancel"/>
+                    <Button x:Name="btnExport" Content="Export" Width="70" Margin="10, 0, 0, 0" Tag="ChooseExport"
+                            Style="{StaticResource MahApps.Styles.Button.Dialogs.AccentHighlight}" Click="ClickBtnExport"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

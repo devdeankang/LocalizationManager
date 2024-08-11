@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ALL_LANGUAGE" xml:space="preserve">
+    <value>All Language</value>
+  </data>
+  <data name="APPLY" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="BY_CUSTOM_TEMPLATE" xml:space="preserve">
+    <value>By Custom Template</value>
+  </data>
+  <data name="BY_LANGUAGE" xml:space="preserve">
+    <value>By Language</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CATEGORY" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CHECK_FIND_DUP_KEYS" xml:space="preserve">
+    <value>Check Find Dup.Keys</value>
+  </data>
+  <data name="COMPRESS_ZIP" xml:space="preserve">
+    <value>Compress ZIP</value>
+  </data>
+  <data name="CREATE" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DUPLICATE_KEYS_EXIST_STR" xml:space="preserve">
+    <value>Duplicate Keys exist in Localization Data.</value>
+  </data>
+  <data name="DUP_KEY_EXIST_STR" xml:space="preserve">
+    <value>original : {0}, rename : {1} :: Duplicate Key '{1}' exists in {2}_{3}.</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EMPTY_KEY_STR" xml:space="preserve">
+    <value>key : {0} :: Empty Key.</value>
+  </data>
+  <data name="EMPTY_ORIGIN_KEY_STR" xml:space="preserve">
+    <value>original : {0}, rename : {1} :: Original Key is empty.</value>
+  </data>
+  <data name="EMPTY_RENAME_KEY_STR" xml:space="preserve">
+    <value>original : {0}, rename : {1} :: Rename Key is empty.</value>
+  </data>
+  <data name="EMPTY_TAG_STR" xml:space="preserve">
+    <value>tag : {0} :: Empty Tag.</value>
+  </data>
+  <data name="ERROR_EXIST_MOVE KEY" xml:space="preserve">
+    <value>Error Exist Move Key.</value>
+  </data>
+  <data name="ERROR_EXIST_REMOVE TAG" xml:space="preserve">
+    <value>Error Exist Remove Tag.</value>
+  </data>
+  <data name="ERROR_EXIST_RENAME KEY" xml:space="preserve">
+    <value>Error Exist Rename Key.</value>
+  </data>
+  <data name="ERROR_EXIST_SWAP KEY" xml:space="preserve">
+    <value>Error Exist Swap Key.</value>
+  </data>
+  <data name="EXPORT" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="EXPORT_ALL" xml:space="preserve">
+    <value>Export All</value>
+  </data>
+  <data name="EXPORT_ALL_LOCALIZATION_FILES" xml:space="preserve">
+    <value>Export All Localization Files…</value>
+  </data>
+  <data name="EXPORT_CATEG_PARTIAL" xml:space="preserve">
+    <value>Export Category Partial</value>
+  </data>
+  <data name="EXPORT_PREFIX_JSON" xml:space="preserve">
+    <value>Export Prefix to Json</value>
+  </data>
+  <data name="EXPORT_PREFIX_JSON_FILES" xml:space="preserve">
+    <value>Export Prefix List to Json Files…</value>
+  </data>
+  <data name="EXPORT_TAG" xml:space="preserve">
+    <value>Export Tag</value>
+  </data>
+  <data name="EXPORT_TBT" xml:space="preserve">
+    <value>Export TBT(To-be-translated)</value>
+  </data>
+  <data name="FILE" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="FIND_DUP_KEYS" xml:space="preserve">
+    <value>Find Dup.Keys</value>
+  </data>
+  <data name="FIND_DUP_KEYS_STR" xml:space="preserve">
+    <value>Find Duplication Keys</value>
+  </data>
+  <data name="FIX_KOREAN" xml:space="preserve">
+    <value>Fix Korean</value>
+  </data>
+  <data name="IMPORT_FILES" xml:space="preserve">
+    <value>Import Files</value>
+  </data>
+  <data name="KEY" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="KOREAN" xml:space="preserve">
+    <value>Korean</value>
+  </data>
+  <data name="LANGAUGE" xml:space="preserve">
+    <value>Langauge</value>
+  </data>
+  <data name="LOADING_LOCAL_FILES" xml:space="preserve">
+    <value>Loading Localization Files</value>
+  </data>
+  <data name="LOAD_FILE _TYPE" xml:space="preserve">
+    <value>Load File Type</value>
+  </data>
+  <data name="LOCATION" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="MANAGE_CATEGORY" xml:space="preserve">
+    <value>Manage Category</value>
+  </data>
+  <data name="MANAGE_LANGUAGE" xml:space="preserve">
+    <value>Manage Language</value>
+  </data>
+  <data name="MATCH_CASE" xml:space="preserve">
+    <value>Match Case</value>
+  </data>
+  <data name="MATCH_WHOLE_WORD" xml:space="preserve">
+    <value>Match whole word</value>
+  </data>
+  <data name="MOVE_KEY" xml:space="preserve">
+    <value>Move Key</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NEW_CREATED_TBT_ONLY" xml:space="preserve">
+    <value>New Created TBT Only</value>
+  </data>
+  <data name="NEW_PROJECT" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="NOT_EQUAL_TOAL_KEY_NUM_STR" xml:space="preserve">
+    <value>Not Equals Original, Rename Key's Total Nums.</value>
+  </data>
+  <data name="NOT_EXIST_KEY_STR" xml:space="preserve">
+    <value>key : {0} :: Key {0} is not exist.</value>
+  </data>
+  <data name="NOT_EXIST_TAG_STR" xml:space="preserve">
+    <value>tag : {0} :: Not exist Tag '{0}' in localData.</value>
+  </data>
+  <data name="NOT_FIND_KEY_ORIGIN_STR" xml:space="preserve">
+    <value>original : {0}, rename : {1} :: Cannot find Key {0}.</value>
+  </data>
+  <data name="NOT_FIND_KEY_RENAME_STR" xml:space="preserve">
+    <value>original : {0}, rename : {1} :: Cannot find Key {1}.</value>
+  </data>
+  <data name="NOT_MOVE_KEY_STR" xml:space="preserve">
+    <value>key : {0} :: Cannot move Key {0} to same files.</value>
+  </data>
+  <data name="NOT_SAVE" xml:space="preserve">
+    <value>Don't Save</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OPEN" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OPEN_PROJECT" xml:space="preserve">
+    <value>Open Project</value>
+  </data>
+  <data name="OPTION" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="ORIGINAL_KEY" xml:space="preserve">
+    <value>Original Key</value>
+  </data>
+  <data name="ORIGIN_NUM_RENAME_NUM_STR" xml:space="preserve">
+    <value>Original Num : {0}, Rename Num : {1}</value>
+  </data>
+  <data name="PARTIAL" xml:space="preserve">
+    <value>Partial</value>
+  </data>
+  <data name="PREFIX" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="PROJECT_NAME" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="REGEX" xml:space="preserve">
+    <value>Regex</value>
+  </data>
+  <data name="RELOAD" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="REMOVE_TAG" xml:space="preserve">
+    <value>Remove Tag</value>
+  </data>
+  <data name="RENAME_KEY" xml:space="preserve">
+    <value>Rename Key</value>
+  </data>
+  <data name="REQUEST_SAVE_STR" xml:space="preserve">
+    <value>Localization data has been changed. Do you want to save All changes?</value>
+  </data>
+  <data name="REQUEST_SYNC_KEY_STR" xml:space="preserve">
+    <value>Sync Key' has not been run. Do you want to run 'Sync Key'?</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SAVE_ALL" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="SAVE_FILE _TYPE" xml:space="preserve">
+    <value>Save File Type</value>
+  </data>
+  <data name="SAVE_LOCALIZATION_LOCALIZATION_FILES" xml:space="preserve">
+    <value>Save Localization Files…</value>
+  </data>
+  <data name="SEARCH" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SELECTED_EXPORT_LIST" xml:space="preserve">
+    <value>Selected Export List</value>
+  </data>
+  <data name="SELECT_CATEG_PARTIAL" xml:space="preserve">
+    <value>Select Category, Partial</value>
+  </data>
+  <data name="SELECT_PROJECT" xml:space="preserve">
+    <value>Select Project</value>
+  </data>
+  <data name="SET_SUMMA_INFORMATION" xml:space="preserve">
+    <value>Set Summary Information</value>
+  </data>
+  <data name="SET_TRANS_STATUS" xml:space="preserve">
+    <value>Set Translation Status</value>
+  </data>
+  <data name="SUMMARY_TITLE_STR" xml:space="preserve">
+    <value>{0} (Summary)</value>
+  </data>
+  <data name="SWAP_KEY" xml:space="preserve">
+    <value>Swap Key</value>
+  </data>
+  <data name="SYNC" xml:space="preserve">
+    <value>Sync</value>
+  </data>
+  <data name="SYNCHRONIZE" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SYNC_KEYS" xml:space="preserve">
+    <value>Sync Keys</value>
+  </data>
+  <data name="SYNC_KEYS _COMPLETE_STR" xml:space="preserve">
+    <value>Sync Keys Completed!</value>
+  </data>
+  <data name="SYNC_KEY_ORDERS" xml:space="preserve">
+    <value>Sync Key Orders</value>
+  </data>
+  <data name="SYNC_KEY_ORDERS_STR" xml:space="preserve">
+    <value>Synchronize by Key Orders…</value>
+  </data>
+  <data name="SYNC_KEY_STR" xml:space="preserve">
+    <value>Synchronize by Keys…</value>
+  </data>
+  <data name="TAG" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="TOOL" xml:space="preserve">
+    <value>Tool</value>
+  </data>
+  <data name="VALUE" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+</root>
